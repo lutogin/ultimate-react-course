@@ -1,4 +1,4 @@
-import { WatchedMovieItem } from '../watched-item/WatchedMovieItem';
+import { WatchedMovieItem } from '../watched-movie-item/WatchedMovieItem';
 
 export function WatchedCollection({ watched }) {
   return (
