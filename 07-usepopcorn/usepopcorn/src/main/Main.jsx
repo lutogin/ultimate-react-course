@@ -8,6 +8,7 @@ import { WatchedSummary } from './WatchedBox/watched-summary/WatchedSummary';
 import {
   WatchedCollection
 } from './WatchedBox/watched-collection/WatchedCollection';
+import { StarRating } from './RateMovie/StarRating';
 
 // import '../index.css';
 
@@ -79,7 +80,15 @@ export function Main() {
         <Box>
           {
             selectedMovie
-            && <div>
+            ? <>
+                <StarRating
+                  maxRating="5"
+                  color="yellow"
+                  size="48"
+                  messages={['Terrible', 'Bad', 'Okay', 'Good', 'Amazing']}
+                />
+              </>
+            : <div>
               <WatchedSummary watched={watched}/>
               <WatchedCollection watched={watched}/>
             </div>
