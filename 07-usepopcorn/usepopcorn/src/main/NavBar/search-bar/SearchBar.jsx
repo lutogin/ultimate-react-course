@@ -1,4 +1,8 @@
-export function SearchBar({ query, onChangeQuery }) {
+import { useState } from 'react';
+
+export function SearchBar({ setMovies, onChangeQuery }) {
+  const [query, setQuery] = useState("");
+
   return (
     <input
       className="search"
