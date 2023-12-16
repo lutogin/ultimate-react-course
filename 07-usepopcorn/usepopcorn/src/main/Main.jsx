@@ -82,7 +82,7 @@ export function Main() {
             selectedMovie
             ? <>
                 <StarRating
-                  maxRating="5"
+                  maxRating={5}
                   color="yellow"
                   size="48"
                   messages={['Terrible', 'Bad', 'Okay', 'Good', 'Amazing']}

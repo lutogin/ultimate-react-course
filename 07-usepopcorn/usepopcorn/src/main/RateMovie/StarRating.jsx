@@ -12,15 +12,15 @@ const starContainerStyle = {
 }
 
 export function StarRating({
-  maxRating = '5',
+  maxRating = 5,
   color = '#fcc419',
-  size = '36',
+  size = 36,
   className = '',
   messages = [],
-  defaultRating = '0',
+  defaultRating = 0,
   onSetRating,
 }) {
-  const [rating, setRating] = useState(Number.parseInt(defaultRating));
+  const [rating, setRating] = useState(defaultRating);
   const [howerRating, setHowerRating] = useState(rating);
 
   const textStyle = {
@@ -43,7 +43,7 @@ export function StarRating({
     setHowerRating(howerRating)
   }
 
-  const message = messages.length === Number.parseInt(maxRating)
+  const message = messages.length === maxRating
     ? messages[howerRating ? howerRating - 1 : rating - 1]
     : howerRating || rating || '';
 
